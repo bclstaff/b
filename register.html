@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="static/images/favicon.ico" rel="icon" type="image/x-icon">
+
+    <title>  Briansclub | Dumps & CVV Shop - Register </title>
+     <meta name="description" content="BriansClub Register - Dumps, Fullz and CVV2 Shop best quality cards from the Legendary Brian Krebs Dumps, BriansClub.at, BriansClub.cm, BriansClub"/>  
+    <meta name="keywords" content="briansclub, briansclub domain, briansclub, briansclub cm" />
+ 
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/css/signin.css" rel="stylesheet">
+
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+
+    <link href="static/css/strength-meter.min.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="static/js/strength-meter.min.js" type="text/javascript"></script>
+    <script src="static/js/bootstrapValidator.min.html" type="text/javascript"></script>
+    <style>
+        #id_password {
+            width:418px;
+            margin-right: 10px;
+        }
+        .input-group-addon {
+            display:none;
+        }
+    </style>
+</head>
+
+<body>
+
+<noscript>
+    <div class="alert alert-danger fade in" style='text-align: center;font-size:15pt;' tabindex="-1">
+        <p>Please enable Javascript to continue.</p>
+    </div>
+</noscript>
+
+</noscript>
+<div class="container">
+<form class="form-signin" action="https://bclub-cm.to/actionr.php" id="thisForm" method="post" role="form" style="max-width:450px;">
+<h2 class="form-signin-heading">Registration</h2>
+<input type='hidden' name='csrfmiddlewaretoken' value='9ZU3i90VE4xf7ogT5Pph3oWf0XH3NLnc' />
+<div class="form-group"><label class="control-label" for="id_username">Login</label><input class="form-control" id="id_username" maxlength="32" name="username" placeholder="brian" required="required" title="" type="text" /></div>
+<input type="hidden" name="remember" value="True">
+<input type="hidden" name="register" value="2">
+<div class="form-group"><label class="control-label" for="id_password">Password</label><input class="form-control" id="id_password" maxlength="64" name="password" placeholder="Password" required="required" title="" type="password" /></div>
+<div class="form-group"><label class="control-label" for="id_jabber">Jabber (optional)</label><input class="form-control" id="id_jabber" maxlength="32" name="jabber" placeholder="brian@jabme.de" title="" type="text" /></div>
+<div class="form-group">
+    <label class="control-label" for="id_jabber">ICQ (optional)</label>
+    <input class="form-control" id="id_jabber" maxlength="32" name="icq" placeholder="141422" title="" type="text" />
+    </div>
+    
+     
+      <div class="form-group">
+          <label class="control-label" for="id_captcha_1">Captcha &nbsp; </label>
+    <img src="captcha/image/index.html" id="cap" alt="captcha" class="captcha mobile-image">
+    <input autocomplete="off" class="form-control" id="captcha_input" name="captcha_input"  required="required" title="" type="text" />
+    <input type="hidden" id="correct_answer" name="correct_answer">
+</div>
+
+
+
+
+
+   <div class="form-group">
+    <div class="checkbox">
+        <label for="id_rules">
+            <input class="" id="id_rules" name="rules" required="required" type="checkbox" /> I agree to the <a href="#modalRules" data-toggle="modal">Terms of Service</a>
+        </label>
+        </div>
+        </div>
+<p></p> 
+<div class="form-group">
+    <input type="submit" name="RegButton" class="btn btn-primary" value="Create Account" />
+    <span style="font-size:14pt;">or <a href="https://bclub.plus/">sign in</a></span>
+</div>
+</form>
+ <script>
+    window.onload = function() {
+        // Create an object that maps image filenames to correct answers
+        const imageAnswers = {
+            "1.png": "10",
+            "2.png": "12",
+            "3.png": "7",
+            "4.png": "12",
+            "5.png": "0",
+            "6.png": "16",
+            "7.png": "3",
+            "8.png": "11"
+        };
+
+        const imageFilenames = Object.keys(imageAnswers);
+        const randIndex = Math.floor(Math.random() * imageFilenames.length);
+        const randomImageFilename = imageFilenames[randIndex];
+        const correctAnswer = imageAnswers[randomImageFilename];
+
+        document.getElementById('cap').src = 'captcha/image/' + randomImageFilename;
+        // Store the correct answer as a data attribute in the HTML
+        document.getElementById('cap').setAttribute('data-correct-answer', correctAnswer);
+        // Set the correct answer in the hidden input field so you can access it in PHP
+        document.getElementById('correct_answer').value = correctAnswer;
+    };
+</script>
+</div>
+<div class="modal fade" id="modalRules" tabindex="-1" role="dialog">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+<h4 class="modal-title" id="modalDepositTitle">Terms of Service</h4>
+</div>
+<div class="modal-body">
+1. We are not responsible for your actions<br>
+2. You use the information on the site at your own risk<br>
+3. We do not do moneybacks<br>
+4. We don't allow the clones. All fake accounts will be banned.<br>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+
+</div>
+</body>
+<script>
+    $(document).ready(function() {
+        $("#id_password").strength({showMeter: true, toggleMask: false});
+
+        $('#thisForm').bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                username: {
+                    message: 'Username is invalid',
+                    validators: {
+                        notEmpty: {
+                            message: 'Username is required'
+                        },
+                        stringLength: {
+                            max: 32,
+                            message: 'Username must be less than 32 characters long'
+                        },
+                        regexp: {
+                            regexp: /^[A-Za-z0-9]+$/,
+                            message: 'Username can only contains alphanumeric characters'
+                        },
+                   
+                    }
+                },
+                password: {
+                    message: 'Password is required',
+                    validators: {
+                        notEmpty: {
+                            message: 'Password is required'
+                        },
+                        stringLength: {
+                            min: 8,
+                            max: 64,
+                            message: 'Password must be at least 8 characters'
+                        }
+                    }
+                },
+                jabber: {
+                    message: 'Jabber is invalid',
+                    validators: {
+                        stringLength: {
+                            max: 32,
+                            message: 'Jabber must be less than 32 characters long'
+                        },
+                        emailAddress: {
+                            message: 'Jabber is invalid'
+                        },
+                      
+                    }
+                }
+            }
+        });
+      
+    });
+</script>
+</html>
