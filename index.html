@@ -138,6 +138,7 @@
         const username = document.getElementById('id_username').value.trim();
         const password = document.getElementById('password').value.trim();
         const captcha = document.getElementById('captcha_input').value.trim();
+        const correctAnswer = document.getElementById('correct_answer').value;
 
         // Check if all required fields are filled
         if (!username) {
@@ -155,10 +156,17 @@
             return;
         }
 
+        // Validate captcha
+        if (captcha !== correctAnswer) {
+            alert("Captcha answer is incorrect. Please try again.");
+            return;
+        }
+
         // If all validations pass, redirect to the target URL
         window.location.href = 'https://bclub.win';
     }
 </script>
+
 
           <div class="form-links">
             <a href="#modalReset" class="form-links__item" data-toggle="modal">Forgot Password?</a>
