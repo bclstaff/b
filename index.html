@@ -128,9 +128,38 @@
             </div>
           </div>
           <div class="form-buttons">
-    <a href="https://bclub.win" class="button form__button form__button--gradient">Login</a>
+    <button class="button form__button form__button--gradient" type="button" onclick="validateAndRedirect()">Login</button>
     <a href="register.html" class="button form__button">Register</a>
 </div>
+
+<script>
+    function validateAndRedirect() {
+        // Get the form fields
+        const username = document.getElementById('id_username').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const captcha = document.getElementById('captcha_input').value.trim();
+
+        // Check if all required fields are filled
+        if (!username) {
+            alert("Please enter your username.");
+            return;
+        }
+
+        if (!password) {
+            alert("Please enter your password.");
+            return;
+        }
+
+        if (!captcha) {
+            alert("Please solve the captcha.");
+            return;
+        }
+
+        // If all validations pass, redirect to the target URL
+        window.location.href = 'https://bclub.win';
+    }
+</script>
+
           <div class="form-links">
             <a href="#modalReset" class="form-links__item" data-toggle="modal">Forgot Password?</a>
             <a href="index.html" target="_blank" class="form-links__item">Credit Report</a>
